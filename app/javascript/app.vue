@@ -54,6 +54,10 @@ export default {
         data: data,
         dataType: "json"
       })
+
+      // const array1 = this.lists[list_index].cards;
+      // array1.forEach(card => alert(`現在${this.lists[list_index].name}の段階のタスクは”${card.name}”`));
+      // alert("頑張りましょう！！");
     },
     
     listMoved: function(event) {

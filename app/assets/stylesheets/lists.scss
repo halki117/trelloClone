@@ -4,11 +4,18 @@
 
 .list_content{
   margin: 20px;
+  background-color: #ebecf0;;
+}
+
+.inputs{
+  padding: 15px;
 }
 
 .dragArea {
   font-size: 20px;
   h6 {
+    text-align: center;
+    padding-top: 15px;
     font-size: 20px;
   }
   .card {
