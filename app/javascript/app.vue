@@ -1,7 +1,7 @@
 <template>
   <draggable v-model="lists" :options="{group: 'lists'}" :animation="200" class="row dragArea" v-on:end="listMoved">
     <div v-for="(list, index) in lists" :key="list.id" class="col-3">
-      <div class="list_content">
+      <div class="list_content" v-on:mousedown="test($event)">
         <h6>{{ list.name }}</h6>
         <hr />
         <draggable v-model="list.cards" :options="{group: 'cards'}" :animation="200" class="dragArea" v-on:change="cardMoved">
@@ -56,9 +56,9 @@ export default {
         dataType: "json"
       })
 
-      // const array1 = this.lists[list_index].cards;
-      // array1.forEach(card => alert(`現在${this.lists[list_index].name}の段階のタスクは”${card.name}”`));
-      // alert("頑張りましょう！！");
+      const array1 = this.lists[list_index].cards;
+      array1.forEach(card => alert(`現在${this.lists[list_index].name}の段階のタスクは”${card.name}”`));
+      alert("頑張りましょう！！");
     },
     
     listMoved: function(event) {
@@ -88,6 +88,8 @@ export default {
           this.messages[list_id] = undefined
         }
       })
+    },
+    test: function(event){
     }
   }
 }
